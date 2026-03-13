@@ -21,75 +21,97 @@ Servidor backend desarrollado con **Node.js**, **Express** y **MongoDB**, aplica
 ## 📁 Arquitectura del proyecto
 
 ```
-src/
-├── config/
-│   ├── auth/           passport.config.js
-│   ├── db/             connect.config.js
-│   └── env/            env.config.js
-├── controllers/
-│   ├── mailer.controller.js
-│   ├── messaging.controller.js
-│   ├── order.controller.js
-│   ├── product.controller.js
-│   ├── student.controller.js
-│   ├── ticket.controller.js
-│   └── user.controller.js
-├── dao/
-│   ├── base.dao.js
-│   ├── order.mongo.dao.js
-│   ├── product.mongo.dao.js
-│   ├── ticket.mongo.dao.js
-│   └── user.mongo.dao.js
-├── middleware/
-│   ├── auth.middleware.js
-│   ├── logger.middleware.js
-│   └── policies.middleware.js
-├── models/
-│   ├── dto/
-│   │   ├── student.dto.js
-│   │   └── user.dto.js
-│   ├── order.model.js
-│   ├── product.model.js
-│   ├── students.model.js
-│   ├── ticket.model.js
-│   └── users.model.js
-├── repositories/
-│   ├── order.repository.js
-│   ├── product.repository.js
-│   ├── ticket.repository.js
-│   └── user.repository.js
-├── router/
-│   ├── routes/
-│   │   ├── auth.router.js
-│   │   ├── jwt.router.js
-│   │   ├── mailer.router.js
-│   │   ├── messaging.router.js
-│   │   ├── order.router.js
-│   │   ├── product.router.js
-│   │   ├── ticket.router.js
-│   │   └── user.router.js
-│   └── router.js
-├── services/
-│   ├── mailer.service.js
-│   ├── messaging.service.js
-│   ├── order.service.js
-│   ├── product.service.js
-│   ├── student.service.js
-│   ├── ticket.service.js
-│   └── user.service.js
-├── views/
-│   ├── emails/
-│   │   ├── order-status.handlebars
-│   │   ├── reset-password.handlebars
-│   │   └── welcome.handlebars
-│   ├── form/
-│   │   └── reset-password-form.handlebars
-│   ├── layouts/
-│   │   └── main.handlebars
-│   └── orders/
-│       └── index.handlebars
-└── server/
-    └── server.app.js
+backendII_trabajoFinal/
+├── src/
+│   ├── config/
+│   │   ├── auth/
+│   │   │   └── passport.config.js
+│   │   ├── db/
+│   │   │   └── connect.config.js
+│   │   └── env/
+│   │       └── env.config.js
+│   ├── controllers/
+│   │   ├── mailer.controller.js
+│   │   ├── messaging.controller.js
+│   │   ├── order.controller.js
+│   │   ├── product.controller.js
+│   │   ├── student.controller.js
+│   │   ├── ticket.controller.js
+│   │   └── user.controller.js
+│   ├── dao/
+│   │   ├── base.dao.js
+│   │   ├── order.mongo.dao.js
+│   │   ├── product.mongo.dao.js
+│   │   ├── ticket.mongo.dao.js
+│   │   └── user.mongo.dao.js
+│   ├── middelware/
+│   │   ├── auth.middelware.js
+│   │   ├── logger.middelware.js
+│   │   └── policies.middelware.js
+│   ├── models/
+│   │   ├── dto/
+│   │   │   ├── student.dto.js
+│   │   │   └── user.dto.js
+│   │   ├── order.model.js
+│   │   ├── product.model.js
+│   │   ├── students.model.js
+│   │   ├── ticket.model.js
+│   │   └── users.model.js
+│   ├── postman/
+│   │   └── Entrega Final.postman_collection.json
+│   ├── repositories/
+│   │   ├── order.repository.js
+│   │   ├── product.repository.js
+│   │   ├── ticket.repository.js
+│   │   └── user.repository.js
+│   ├── router/
+│   │   ├── custom/
+│   │   │   └── CustomRouter.js
+│   │   ├── routes/
+│   │   │   ├── advanced.router.js
+│   │   │   ├── api.v1.router.js
+│   │   │   ├── auth.router.js
+│   │   │   ├── home.router.js
+│   │   │   ├── jwt.router.js
+│   │   │   ├── mailer.router.js
+│   │   │   ├── messaging.router.js
+│   │   │   ├── new.student.router.js
+│   │   │   ├── order.router.js
+│   │   │   ├── process.router.js
+│   │   │   ├── product.router.js
+│   │   │   ├── profile.router.js
+│   │   │   ├── student.router.js
+│   │   │   ├── ticket.router.js
+│   │   │   └── user.router.js
+│   │   └── router.js
+│   ├── server/
+│   │   ├── hbs.helper.js
+│   │   └── server.app.js
+│   ├── services/
+│   │   ├── mailer.service.js
+│   │   ├── messaging.service.js
+│   │   ├── order.service.js
+│   │   ├── product.service.js
+│   │   ├── student.service.js
+│   │   ├── ticket.service.js
+│   │   └── user.service.js
+│   └── views/
+│       ├── emails/
+│       │   ├── order-status.handlebars
+│       │   ├── reset-password.handlebars
+│       │   └── welcome.handlebars
+│       ├── form/
+│       │   └── reset-password-form.handlebars
+│       ├── layouts/
+│       │   └── main.handlebars
+│       └── orders/
+│           └── index.handlebars
+├── .env
+├── .gitignore
+├── app.js
+├── package-lock.json
+├── package.json
+└── README.md
 ```
 
 ### Flujo de capas
@@ -296,6 +318,12 @@ npm start
 | POST | `/api/mail/welcome` | Enviar email de bienvenida |
 | POST | `/api/mail/order-status` | Enviar email de estado de orden |
 
+### 💬 Mensajería — `/api/messaging`
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| POST | `/api/messaging/sms` | Enviar SMS |
+| POST | `/api/messaging/whatsapp` | Enviar WhatsApp |
 ---
 
 ## 🧪 Ejemplos de uso en Postman
