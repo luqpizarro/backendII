@@ -1,0 +1,424 @@
+{
+  "info": {
+    "_postman_id": "5ba5e792-7adf-49e1-b14b-8b905227e07b",
+    "name": "Entrega Final",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49586093",
+    "_collection_link": "https://go.postman.co/collection/49586093-5ba5e792-7adf-49e1-b14b-8b905227e07b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Registrar Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"first_name\": \"Lucas\",\n    \"last_name\": \"Pizarro\",\n    \"email\": \"luq.pizarro@gmail.com\",\n    \"password\": \"123456\",\n    \"age\": 34,\n    \"role\": \"user\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Usuario",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"luq.pizarro@gmail.com\",\n    \"password\": \"nuevapass\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Current",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"luq.pizarro@gmail.com\",\n    \"password\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/current",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "current"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Forgot Password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"luq.pizarro@gmail.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/forgot-password",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "forgot-password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Reset Password",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"newPassword\": \"nuevapass\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/reset-password?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWIzNTNjNWRmMDg2M2I5YTJkZTU3MDIiLCJlbWFpbCI6Imx1cS5waXphcnJvQGdtYWlsLmNvbSIsImlhdCI6MTc3MzM2MTE1NCwiZXhwIjoxNzczMzY0NzU0fQ.wredUfv7rb5n3UK8tqN3Ir-apB-R2PqlEwyXiCLEE5M",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "reset-password"
+          ],
+          "query": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OWIzNTNjNWRmMDg2M2I5YTJkZTU3MDIiLCJlbWFpbCI6Imx1cS5waXphcnJvQGdtYWlsLmNvbSIsImlhdCI6MTc3MzM2MTE1NCwiZXhwIjoxNzczMzY0NzU0fQ.wredUfv7rb5n3UK8tqN3Ir-apB-R2PqlEwyXiCLEE5M"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"newPassword\": \"nuevapass\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth-jwt/logout",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth-jwt",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear productos (Seed)",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"marugonz@gmail.com\",\n    \"password\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products/seed",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products",
+            "seed"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Productos",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"marugonz@gmail.com\",\n    \"password\": \"123456\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Productos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Earpods\",\n    \"description\": \"Earpods Wireless\",\n    \"price\": 12000,\n    \"stock\": 8,\n    \"category\": \"audio\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Productos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 15000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products/69b359b11796b417770f1091",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products",
+            "69b359b11796b417770f1091"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar productos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"price\": 15000\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products/69b359b11796b417770f1091",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products",
+            "69b359b11796b417770f1091"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Comprar productos",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"items\": [\n        { \"productId\" : \"69b359421796b417770f1088\", \"quantity\": 1 },\n        { \"productId\" : \"69b359421796b417770f1089\", \"quantity\": 6 }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tickets/purchase",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "tickets",
+            "purchase"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ver mis tickets",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"items\": [\n        { \"productId\" : \"69b359421796b417770f1088\", \"quantity\": 1 },\n        { \"productId\" : \"69b359421796b417770f1089\", \"quantity\": 6 }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/tickets/my-tickets",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "tickets",
+            "my-tickets"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
