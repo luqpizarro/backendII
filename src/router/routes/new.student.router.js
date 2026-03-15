@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import { requireJwtCookie } from '../../middelware/auth.middelware.js';
-import { policies } from '../../middelware/policies.middelware.js';
+import { requireJwtCookie } from '../../middleware/auth.middleware.js';
+import { policies } from '../../middleware/policies.middleware.js';
 import { studentController as ctrl } from '../../controllers/student.controller.js';
 
 

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-// import { requireJWTCookie } from "../../middelware/auth.middelware.js";
-import { policies } from "../../middelware/policies.middelware.js";
+// import { requireJWTCookie } from "../../middleware/auth.middleware.js";
+import { policies } from "../../middleware/policies.middleware.js";
 import { orderController as ctrl } from '../../controllers/order.controller.js';
 
 const router = Router()

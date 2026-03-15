@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { userController as ctrl } from "../../controllers/user.controller.js";
-import { requireJwtCookie, requireManyRoles } from "../../middelware/auth.middelware.js";
+import { requireJwtCookie, requireManyRoles } from "../../middleware/auth.middleware.js";
 
 const router = new Router();
 
