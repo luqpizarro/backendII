@@ -212,8 +212,8 @@ sequenceDiagram
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/luqpizarro/backendII_trabajoFinal
-cd backendII_trabajoFinal
+git clone https://github.com/luqpizarro/backendII
+cd backendII
 ```
 
 ### 2. Instalar dependencias
