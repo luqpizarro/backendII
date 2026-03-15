@@ -8,8 +8,8 @@ import environment, {validateEnv} from '../config/env/env.config.js'
 import { connectAuto } from "./../config/db/connect.config.js";
 import { initPassport } from "./../config/auth/passport.config.js";
 
-//Middelware
-import logger from "./../middelware/logger.middelware.js";
+//middleware
+import logger from "./../middleware/logger.middleware.js";
 
 //Session
 import session from "express-session";
