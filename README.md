@@ -44,10 +44,10 @@ backendII_trabajoFinal/
 │   │   ├── product.mongo.dao.js
 │   │   ├── ticket.mongo.dao.js
 │   │   └── user.mongo.dao.js
-│   ├── middelware/
-│   │   ├── auth.middelware.js
-│   │   ├── logger.middelware.js
-│   │   └── policies.middelware.js
+│   ├── middleware/
+│   │   ├── auth.middleware.js
+│   │   ├── logger.middleware.js
+│   │   └── policies.middleware.js
 │   ├── models/
 │   │   ├── dto/
 │   │   │   ├── student.dto.js
